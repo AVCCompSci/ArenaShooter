@@ -14,8 +14,8 @@ public class Move : MonoBehaviour
     void Update()
     {
         Vector3 posistion = transform.position;                  //make a new vector variable and store the current x,y,z
-        float newPos = Mathf.Sin(Time.time * .75f);              //make a float variable to store the sin values 
-        transform.position = new Vector3(.0f, newPos, .0f) * 5f; //set the new position
+        float newPos = Mathf.Sin(Time.time * 5f);              //make a float variable to store the sin values 
+        transform.position = new Vector3(.0f, newPos, .0f) * 1.5f; //set the new position
         
 
 
