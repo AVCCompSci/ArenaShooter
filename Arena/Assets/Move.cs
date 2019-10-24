@@ -13,9 +13,9 @@ public class Move : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 posistion = transform.position;
-        float newPos = Mathf.Sin(Time.time * .75f);
-        transform.position = new Vector3(.0f, newPos, .0f) * 5f; 
+        Vector3 posistion = transform.position;                  //make a new vector variable and store the current x,y,z
+        float newPos = Mathf.Sin(Time.time * .75f);              //make a float variable to store the sin values 
+        transform.position = new Vector3(.0f, newPos, .0f) * 5f; //set the new position
         
 
 
