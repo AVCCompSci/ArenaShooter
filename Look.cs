@@ -5,10 +5,10 @@ using UnityEngine;
 public class Look : MonoBehaviour
 {
     [SerializeField]
-    private Transform player;                                           //reference to gameobject
-    [SerializeField]                                                                
-    
-    private Transform look;                                                 //reference to gameobject
+    private Transform player = null;                                     //reference to gameobject
+    [SerializeField]
+
+    private Transform look = null;                                      //reference to gameobject
 
 
     private float speed = 3.5f;
@@ -21,7 +21,7 @@ public class Look : MonoBehaviour
     private Vector2 Position;                                        // screen position
     [SerializeField]
     private Vector2 currentMouse;                                   //reference to where our mouse would be
-   
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,7 +32,7 @@ public class Look : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
+
         LookUpandDown();
     }
     void LookUpandDown()
@@ -42,11 +42,11 @@ public class Look : MonoBehaviour
         Position.x = Position.x + currentMouse.x * -speed;                                 //add the mouse inputs to position x
         Position.y = Position.y + currentMouse.y * speed;                                  //add the mouse inputs to position y
 
-       
+
         //rotations
         look.localRotation = Quaternion.Euler(Position.x, 0, 0f);                      //local rotate the look root
         player.localRotation = Quaternion.Euler(0, Position.y, 0f);                    //local rotate the player root
-        
+
 
 
 
